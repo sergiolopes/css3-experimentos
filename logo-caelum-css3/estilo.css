@@ -1,0 +1,113 @@
+/* carrega as duas fontes do logo */
+@font-face { 
+	font-family: "CaelumKabel"; 
+	src: url('Kabel LT Book.ttf'); 
+}
+@font-face { 
+	font-family: "CaelumHevel"; 
+	src: url('HelveticaLTMM.otf'); 
+}
+
+/* Layout da página */
+body {
+	background: #efeff7;
+	font-size: 10px;
+	padding: 10px 0 30px 40px;
+}
+div, strong, em, h2 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-style: normal;	
+}
+h2 {
+	color: #556;
+	font: 30px Tahoma;
+	margin: 10px 0 20px -20px;
+	text-shadow: 1px 1px #fff;
+}
+h2:after {
+	content: ': ';
+}
+
+/* LOGO */
+.caelum {
+	margin-bottom: 10px;
+	position: relative;
+	height: 20em;
+	width: 64em;
+}
+.caelum strong { /* Caelum */
+	display: block;
+	font-family: "CaelumKabel", "Arial";
+	font-size: 16.3em;
+	position: absolute;
+	top: -0.144em;
+	left: 1.385em;
+}
+.caelum em { /* Ensino e Inovação */
+	display: block;
+	font-family: "CaelumHevel", "Arial";
+	font-size: 5em;
+	position: absolute;
+	top: 2.73em;
+	left: 4.63em;
+	white-space: nowrap;
+}
+.caelum strong:before { /* fundo preto */
+	background: #000;
+	content: ' ';
+	display: block;
+	font-size: 61.35%;
+	height: 2em;
+	left: -2.255em;
+	position: absolute;
+	top: 0.23em;
+	width: 2em;
+	
+	-moz-border-radius: 0.18em;
+	-webkit-border-radius: 0.18em;
+	border-radius: 0.18em;
+}
+.caelum strong:after { /* borda preta */
+	border: 0.08em solid #000;
+	content: ' ';
+	display: block;
+	font-size: 61.35%;
+	position: absolute;
+	height: 1.84em;
+	width: 1.84em;
+	top: 0.23em;
+	left: -2.255em;
+	z-index: 3;
+	
+	-moz-border-radius: 0.18em;
+	-webkit-border-radius: 0.18em;
+	border-radius: 0.18em;
+}
+.caelum em:before { /* meia-lua branca */
+	background: #fff;
+	content: ' ';
+	font-size: 0.2em;
+	height: 18.7em;
+	position: absolute;
+	top: -13.1em;
+	left: -22.58em;
+	width: 18.7em;
+	z-index: 2;
+	
+	-moz-border-radius: 19em 0 0 0;
+	-webkit-border-top-left-radius: 19em;
+	border-radius: 19em 0 0 0;
+}
+.caelum em:after { /* estrela */
+	content: '✶';
+	color: #fff;
+	font-size: 0.6em;
+	font-family: 'Arial Black';
+	font-weight: bold;
+	position: absolute;
+	top: -4.35em;
+	left: -7.1em;
+	z-index: 3;
+}
