@@ -26,8 +26,11 @@ h2 {
 	margin: 10px 0 20px -20px;
 	text-shadow: 1px 1px #fff;
 }
-h2:after {
-	content: ': ';
+h2 small {
+	font-size: 60%;
+}
+p {
+	font-size: 1.6em;
 }
 
 /* LOGO */
