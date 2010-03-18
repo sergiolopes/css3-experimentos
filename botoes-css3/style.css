@@ -102,25 +102,47 @@
     /* Gradiente fake no Opera, FF3.5- 
      * (opcional - precisa do detector de gradientes em JavaScript)
      */
-	.nogradient .nicebutton:hover {
-		background-image: rgba(0,0,0,0.09);
+	.nogradient .nicebutton:before,
+	.nogradient .nicebutton:after {
+        content: ' ';
+		display: block;
+		height: 0.9em;
+	
+		/* reset do reflexo */
+		opacity: 1;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+    .nogradient .nicebutton:before {
+        background: rgba(255,255,255,0.25);
+		margin: -0.4em -0.40em -0.5em -0.40em;
+		
+	    -moz-border-radius-topleft: 0.35em;
+		-moz-border-radius-topright: 0.35em;
+		border-top-left-radius: 0.35em;
+		border-top-right-radius: 0.35em;
+	    }
+	    .nogradient .nicebutton:hover:before {
+	       background: rgba(0,0,0,0.3);
+	    }
+	.nogradient .nicebutton:after {
+        background: rgba(255,255,255,0);
+		margin: -0.5em -0.40em -0.4em -0.40em;
+		
+	    -moz-border-radius-bottomleft: 0.35em;
+		-moz-border-radius-bottomright: 0.35em;
+		border-bottom-left-radius: 0.35em;
+		border-bottom-right-radius: 0.35em;
 		}
-	    .nogradient .nicebutton:after {
-	        content: ' ';
-	        background: none;
-	        border-top: 0.88em solid rgba(255,255,255,0.25);
-			display: block;
-			height: 0.88em;
-			margin: -1.40em -0.40em -0.35em -0.40em;
-			
-		    -moz-border-radius: 0.35em;
-	        -webkit-border-radius: 0.35em;
-	        border-radius: 0.35em;
-		    }
-		    .nogradient .nicebutton:hover:after {
-		       background: rgba(0,0,0,0.05);
-		       border-top-color: rgba(0,0,0,0.10);
-		    }
+	    .nogradient .nicebutton:hover:after {
+	       background: rgba(0,0,0,0.2);
+	    }
+		.nogradient .nicebutton:active:after {
+			/* reset do reflexo */
+			margin: -0.5em -0.40em -0.4em -0.40em;
+			height: 0.9em;
+		}
+
 
 /* Cores diferentes */
 .nicebutton.blue   { background-color: #2daebf; }
