@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* carrega as duas fontes do logo */
 @font-face { 
 	font-family: "CaelumKabel"; 
@@ -104,7 +106,7 @@ p {
 	border-radius: 19em 0 0 0;
 }
 .caelum em:after { /* estrela */
-	content: '✶';
+	content: '\2736';
 	color: #fff;
 	font-size: 0.6em;
 	font-family: 'Arial Black';
