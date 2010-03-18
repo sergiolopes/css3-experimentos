@@ -40,7 +40,7 @@
 	 */
 	if (!$.browser.msie) {
 		var el = $('<a/>').addClass('nicebutton').appendTo('body').css({opacity: '0.01'});
-		if (tst.css('background-image').indexOf('gradient') === -1) {
+		if (el.css('background-image').indexOf('gradient') === -1) {
 			$('body').addClass('nogradient');
 		}
 		el.remove();
