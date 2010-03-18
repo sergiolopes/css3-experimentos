@@ -53,15 +53,14 @@
 	    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.15)), to(rgba(0,0,0,0.05)));
 	    background-image: linear-gradient(top, rgba(255,255,255,0.05), rgba(255,255,255,0.25));
 
-        /* sombra pra fora, pra profundidade */
-	    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-	    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
-	    box-shadow: 0 0 3px rgba(0,0,0,0.3);
-
 	    /* gradiente e sombra no IE */
         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000,endColorstr=#02000000), progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=1);
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000,endColorstr=#02000000), progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=1)";	
 
+	    /* sombra pra fora, pra profundidade */
+	    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+	    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 	} 
 	.nicebutton:active  {
 	    /* sombra pra dentro, pra profundidade negativa */
