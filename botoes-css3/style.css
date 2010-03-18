@@ -29,9 +29,8 @@
     color: #FFF;
 	cursor: pointer;
 	font: bold 16px "Helvetica Neue", Helvetica, Arial, clean, sans-serif;
-	line-height: 1;
 	margin: 0.2em;
-	padding: 0.4em;
+	padding: 0.25em 0.4em;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
