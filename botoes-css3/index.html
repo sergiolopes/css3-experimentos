@@ -35,15 +35,15 @@
 
 	<script type="text/javascript">
 	/*	JavaScript opcional que habilita um gradiente "fake" nos browsers antigos
-	 *	(Opera, Firefox 3.5 e anteriores).	
+	 *	(Opera, Safari 3, Firefox 3.5 e anteriores).	
 	 *	Recomendado.
 	 */
-	if (!$.browser.msie && 
-			$('<a/>').addClass('nicebutton')
-				.css({display: 'none'})
-				.appendTo('body')
-				.css('background-image').indexOf('gradient') === -1) {
-		$('body').addClass('nogradient');
+	if (!$.browser.msie) {
+		var el = $('<a/>').addClass('nicebutton').appendTo('body').css({opacity: '0.01'});
+		if (tst.css('background-image').indexOf('gradient') === -1) {
+			$('body').addClass('nogradient');
+		}
+		el.remove();
 	}
 	</script>
 	
