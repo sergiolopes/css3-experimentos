@@ -26,7 +26,6 @@
     -webkit-border-radius: 0.35em;
     border-radius: 0.35em;
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     color: #FFF;
 	cursor: pointer;
 	font: bold 16px "Helvetica Neue", Helvetica, Arial, clean, sans-serif;
@@ -63,7 +62,6 @@
         filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000,endColorstr=#02000000), progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=1);
         -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000,endColorstr=#02000000), progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=1)";	
 
-		border-bottom-color: rgba(0, 0, 0, 0.15);
 	} 
 	.nicebutton:active  {
 	    /* sombra pra dentro, pra profundidade negativa */
