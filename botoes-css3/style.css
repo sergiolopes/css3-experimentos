@@ -99,7 +99,7 @@
 			height: 0.46em;
 		}
 	
-    /* Gradiente fake no Opera, FF3.5- 
+    /* Gradiente fake no Opera, FF3.5-, Safari 3 
      * (opcional - precisa do detector de gradientes em JavaScript)
      */
 	.nogradient .nicebutton:before,
@@ -119,6 +119,8 @@
 		
 	    -moz-border-radius-topleft: 0.35em;
 		-moz-border-radius-topright: 0.35em;
+		-webkit-border-top-left-radius: 0.35em;
+		-webkit-border-top-right-radius: 0.35em;
 		border-top-left-radius: 0.35em;
 		border-top-right-radius: 0.35em;
 	    }
@@ -131,6 +133,8 @@
 		
 	    -moz-border-radius-bottomleft: 0.35em;
 		-moz-border-radius-bottomright: 0.35em;
+		-webkit-border-bottom-left-radius: 0.35em;
+		-webkit-border-bottom-right-radius: 0.35em;
 		border-bottom-left-radius: 0.35em;
 		border-bottom-right-radius: 0.35em;
 		}
