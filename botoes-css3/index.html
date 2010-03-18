@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Experimentos com botões no CSS3</title>
+	
+	<!-- Estilo dos botões - com comentários -->
+	<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+</head>
+<body>
+
+	<a href="#" class="nicebutton">Meu link</a><br>
+	<a href="#" class="nicebutton orange">Meu link laranja</a><br>
+	<a href="#" class="nicebutton magenta">Meu link magenta</a><br>
+	<a class="nicebutton yellow">Meu link amarelo</a><br>
+
+	<h1>Tamanhos diferentes</h1>
+	<a href="#" class="nicebutton red small">Meu link vermelho bem pequeno</a><br>
+	<a href="#" class="nicebutton purple">Meu link roxo com tamanho normal</a><br>
+	<a href="#" class="nicebutton green big">Meu link verde grandinho</a><br>
+	<a href="#" class="nicebutton blue verybig">Meu link bem grande</a><br>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	/*	JavaScript opcional que habilita um gradiente "fake" nos browsers antigos
+	 *	(Opera, Firefox 3.5 e anteriores).	
+	 *	Recomendado.
+	 */
+	if (!$.browser.msie && 
+			$('<test/>').addClass('nicebutton')
+				.css({display: 'none'})
+				.appendTo('body')
+				.css('background-image').indexOf('gradient') === -1) {
+		$('body').addClass('nogradient');
+	}
+	</script>
+	
+	<!-- 
+		Inspirações:
+			http://www.zurb.com/article/266/super-awesome-buttons-with-css3-and-rgba
+			http://code.google.com/p/sexybuttons/
+	-->
+</body>
+</html>

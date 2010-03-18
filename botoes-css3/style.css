@@ -1,0 +1,115 @@
+/* 
+ * Botões em CSS3 com Graceful Degradation.
+ * Funciona no Safari, Firefox, Chrome, Opera e IE
+ */
+.nicebutton {
+	/* fundo gradiente */
+	background-color: #444;
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.5)), to(rgba(255,255,255,0.1)));
+    background-image: linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+
+    /* letterpress effect */
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
+
+    /* sombra pra fora, pra profundidade */
+    -moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+
+    /* gradiente e sombra no IE */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#70FFFFFF,endColorstr=#15FFFFFF), progid:DXImageTransform.Microsoft.Shadow(color=#888888,direction=180,strength=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#70FFFFFF,endColorstr=#15FFFFFF), progid:DXImageTransform.Microsoft.Shadow(color=#888888,direction=180,strength=1)";
+
+	/* borda redonda */
+    -moz-border-radius: 0.35em;
+       -webkit-border-radius: 0.35em;
+       border-radius: 0.35em;
+
+	border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: #FFF;
+	cursor: pointer;
+	font: bold 16px "Helvetica Neue", Helvetica, Arial, clean, sans-serif;
+	line-height: 1;
+	margin: 0.2em;
+	padding: 0.4em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+    white-space: nowrap;
+	width: auto;
+	user-select: none;
+	-moz-user-select: none;
+	zoom: 1; /* hasLayout no IE */
+	
+	/* Cross browser inline block hack - http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	}
+	.nicebutton:hover {
+        /* fundo gradiente */
+	    background-image: -moz-linear-gradient(top, rgba(0,0,0,0.15), rgba(0,0,0,0.01));
+	    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.15)), to(rgba(0,0,0,0.05)));
+	    background-image: linear-gradient(top, rgba(255,255,255,0.05), rgba(255,255,255,0.25));
+
+        /* sombra pra fora, pra profundidade */
+	    -moz-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+
+	    /* gradiente e sombra no IE */
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000,endColorstr=#02000000), progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=1);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#30000000,endColorstr=#02000000), progid:DXImageTransform.Microsoft.Shadow(color=#CCCCCC,direction=180,strength=1)";	
+
+		border-bottom-color: rgba(0, 0, 0, 0.15);
+	} 
+	.nicebutton.selected, 
+	.nicebutton:active  {
+	    /* sombra pra dentro, pra profundidade negativa */
+        -moz-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.6);
+        -webkit-box-shadow: 0 0 0; /* webkit não suporta inset */
+        box-shadow: inset 1px 1px 2px rgba(0,0,0,0.6);
+
+		/* quando clica, desce um pouquinho */
+		top: 1px;
+	}
+
+    /* Gradiente fake no Opera, FF3.5- 
+     * (precisa do detector de gradientes em JavaScript)
+     */
+	.nogradient .nicebutton:hover {
+		background-image: rgba(0,0,0,0.09);
+		}
+	    .nogradient .nicebutton:after {
+	        content: ' ';
+	        background: none;
+	        border-top: 0.88em solid rgba(255,255,255,0.25);
+			display: block;
+			height: 0.88em;
+			margin: -1.40em -0.40em -0.35em -0.40em;
+			
+		    -moz-border-radius: 0.35em;
+	        -webkit-border-radius: 0.35em;
+	        border-radius: 0.35em;
+		    }
+		    .nogradient .nicebutton:hover:after {
+		       background: rgba(0,0,0,0.05);
+		       border-top-color: rgba(0,0,0,0.10);
+		    }
+
+/* Cores diferentes */
+.nicebutton.blue   { background-color: #2daebf; }
+.nicebutton.red    { background-color: #e33100; }
+.nicebutton.magenta{ background-color: #a9014b; }
+.nicebutton.orange { background-color: #ff5c00; }
+.nicebutton.yellow { background-color: #ffb515; }
+.nicebutton.green  { background-color: #00AB38; }
+.nicebutton.purple { background-color: #760654; }
+
+/* Tamanhos pré-determinados */
+.nicebutton.verybig { font-size: 36px; }
+.nicebutton.big     { font-size: 24px; }
+.nicebutton.small   { font-size: 12px; }
