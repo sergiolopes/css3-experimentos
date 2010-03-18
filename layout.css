@@ -1,0 +1,29 @@
+/* Layout da página */
+body {
+	background: #efeff7;
+	font-size: 10px;
+	font-family: Arial;
+	padding: 10px 0 30px 40px;
+}
+div, strong, em, h2, li {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-style: normal;	
+}
+h2 {
+	color: #556;
+	font: 30px Tahoma;
+	margin: 10px 0 20px -20px;
+	text-shadow: 1px 1px #fff;
+}
+h2 small {
+	font-size: 60%;
+}
+p {
+	font-size: 1.6em;
+}
+
+li {
+	font-size: 2em;
+}
