@@ -71,7 +71,34 @@
 		/* quando clica, desce um pouquinho */
 		top: 1px;
 	}
+		
+	/* (opcional) Reflexo embaixo do botão */
+	.nicebutton.reflective:after {
+		background-color: inherit;
+        content: ' ';
+		display: block;
+		height: 0.5em;
+		margin: 0.52em -0.40em -1.02em -0.40em;
+		opacity: 0.3;
 
+		/* bordas redondas em cima apenas */
+	    -moz-border-radius-topleft: 0.35em;
+	    -webkit-border-top-left-radius: 0.35em;
+	    border-top-left-radius: 0.35em;
+	    -moz-border-radius-topright: 0.35em;
+	    -webkit-border-top-right-radius: 0.35em;
+	    border-top-right-radius: 0.35em;
+	
+		/* gradiente */
+		background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.01)), to(rgba(255,255,255,0.9)));
+	    background-image: -moz-linear-gradient(top, rgba(255,255,255,0.01), rgba(255,255,255,0.9));
+	    background-image: linear-gradient(top, rgba(255,255,255,0.01), rgba(255,255,255,0.9));
+		}
+		.nicebutton.reflective:active:after {
+			margin: 0.48em -0.40em -0.95em -0.40em;
+			height: 0.46em;
+		}
+	
     /* Gradiente fake no Opera, FF3.5- 
      * (opcional - precisa do detector de gradientes em JavaScript)
      */
