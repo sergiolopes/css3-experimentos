@@ -38,11 +38,8 @@
 	 *	(Opera, Firefox 3.5 e anteriores).	
 	 *	Recomendado.
 	 */
-	if (!$.browser.msie && 
-			$('<a/>').addClass('nicebutton')
-				.css({display: 'none'})
-				.appendTo('body')
-				.css('background-image').indexOf('gradient') === -1) {
+	var tst = $('<a/>').addClass('nicebutton').css({display: 'none'}).appendTo('body');
+	if (!$.browser.msie && tst.css('background-image').indexOf('gradient') === -1) {
 		$('body').addClass('nogradient');
 	}
 	</script>
