@@ -77,7 +77,7 @@
         content: ' ';
 		display: block;
 		height: 0.5em;
-		margin: 0.52em -0.40em -1.02em -0.40em;
+		margin: 0.35em -0.40em -0.85em -0.40em;
 		opacity: 0.3;
 
 		/* bordas redondas em cima apenas */
@@ -94,18 +94,21 @@
 	    background-image: linear-gradient(top, rgba(255,255,255,0.01), rgba(255,255,255,0.9));
 		}
 		.nicebutton.reflective:active:after {
-			margin: 0.48em -0.40em -0.95em -0.40em;
+			margin: 0.30em -0.40em -0.76em -0.40em;
 			height: 0.46em;
 		}
 	
     /* Gradiente fake no Opera, FF3.5-, Safari 3 
      * (opcional - precisa do detector de gradientes em JavaScript)
      */
+	.nogradient .nicebutton {
+		line-height: 1;
+	}
 	.nogradient .nicebutton:before,
 	.nogradient .nicebutton:after {
         content: ' ';
 		display: block;
-		height: 0.9em;
+		height: 0.8em;
 	
 		/* reset do reflexo */
 		opacity: 1;
@@ -114,7 +117,7 @@
 	}
     .nogradient .nicebutton:before {
         background: rgba(255,255,255,0.25);
-		margin: -0.4em -0.40em -0.5em -0.40em;
+		margin: -0.25em -0.40em -0.5em -0.40em;
 		
 	    -moz-border-radius-topleft: 0.35em;
 		-moz-border-radius-topright: 0.35em;
@@ -128,7 +131,7 @@
 	    }
 	.nogradient .nicebutton:after {
         background: rgba(255,255,255,0);
-		margin: -0.5em -0.40em -0.4em -0.40em;
+		margin: -0.5em -0.40em -0.25em -0.40em;
 		
 	    -moz-border-radius-bottomleft: 0.35em;
 		-moz-border-radius-bottomright: 0.35em;
@@ -142,8 +145,8 @@
 	    }
 		.nogradient .nicebutton:active:after {
 			/* reset do reflexo */
-			margin: -0.5em -0.40em -0.4em -0.40em;
-			height: 0.9em;
+			margin: -0.5em -0.40em -0.25em -0.40em;
+			height: 0.8em;
 		}
 
 /* Cores diferentes */
